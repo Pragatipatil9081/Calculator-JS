@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        min-height: 97vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        background-color:rgba(11, 4, 2, 0.683);
+        box-shadow: 4px 4px 40px;
+        height: 400px;
+        width: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 10px;
+      }
+      .buttons {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .display {
+        height: 95px;
+        width: 295px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 5px;
+        font-size: 25px;
+        text-align: right;
+        pointer-events: none;
+      }
+      .btn {
+        height: 3.6rem;
+        width: 4.5rem;
+        margin: 1.5px;
+        justify-content: space-between;
+        padding: 20px;
+        border-radius: 8px;
+        border-color: rgba(46, 44, 44, 0.437);
+      }
+      .btn:hover {
+        background-color: rgb(12, 14, 14);
+        color: aliceblue;
+      }
+      #eql
+      {
+        background-color: rgb(12, 195, 85);
+        width: 144px;
+      }
+      #clr
+      {
+        background-color: rgb(233, 41, 51);
+        width: 144px;
+      }
+    </style>
+    <script src="1.BTNcal.js" async></script>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" class="display" id="display1" />
+      <div class="buttons">
+        <button class="btn" onclick="cal(1)">1</button>
+        <button class="btn" onclick="cal(2)">2</button>
+        <button class="btn" onclick="cal(3)">3</button>
+        <button class="btn" onclick="cal('+')">+</button>
+        <button class="btn" onclick="cal(4)">4</button>
+        <button class="btn" onclick="cal(5)">5</button>
+        <button class="btn" onclick="cal(6)">6</button>
+        <button class="btn" onclick="cal('-')">-</button>
+        <button class="btn" onclick="cal(7)">7</button>
+        <button class="btn" onclick="cal(8)">8</button>
+        <button class="btn" onclick="cal(9)">9</button>
+        <button class="btn" onclick="cal('*')">*</button>
+        <button class="btn" onclick="cal('.')">.</button>
+        <button class="btn" onclick="cal(0)">0</button>
+        <button class="btn" onclick="dlt()">&larr;</button>
+        <button class="btn" onclick="cal('/')">/</button>
+        <button class="btn" id="clr" onclick="clr()">C</button>
+        <button class="btn" id="eql" onclick="Result()">=</button>
+      </div>
+    </div>
+  </body>
+</html>
